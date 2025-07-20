@@ -104,23 +104,25 @@ const ProfileCard = ({ profile }: { profile: UserProfile }) => (
     <div className="grid grid-cols-2 gap-4 text-sm">
       <div>
         <span className="text-gray-600 dark:text-gray-400">Yaş:</span>
-        <span className="ml-2 font-medium">{profile.age}</span>
+        <span className="ml-2 font-medium">{profile.age || 'N/A'}</span>
       </div>
       <div>
         <span className="text-gray-600 dark:text-gray-400">Cinsiyet:</span>
-        <span className="ml-2 font-medium">{profile.gender === 'male' ? 'Erkek' : 'Kadın'}</span>
+        <span className="ml-2 font-medium">
+          {profile.gender === 'male' ? 'Erkek' : profile.gender === 'female' ? 'Kadın' : 'N/A'}
+        </span>
       </div>
       <div>
         <span className="text-gray-600 dark:text-gray-400">Kilo:</span>
-        <span className="ml-2 font-medium">{profile.weight_kg} kg</span>
+        <span className="ml-2 font-medium">{profile.weight_kg ? `${profile.weight_kg} kg` : 'N/A'}</span>
       </div>
       <div>
         <span className="text-gray-600 dark:text-gray-400">Boy:</span>
-        <span className="ml-2 font-medium">{profile.height_cm} cm</span>
+        <span className="ml-2 font-medium">{profile.height_cm ? `${profile.height_cm} cm` : 'N/A'}</span>
       </div>
       <div>
         <span className="text-gray-600 dark:text-gray-400">Aktivite:</span>
-        <span className="ml-2 font-medium capitalize">{profile.activity_level}</span>
+        <span className="ml-2 font-medium capitalize">{profile.activity_level || 'N/A'}</span>
       </div>
       <div>
         <span className="text-gray-600 dark:text-gray-400">Hedef:</span>
