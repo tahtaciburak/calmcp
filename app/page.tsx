@@ -630,7 +630,7 @@ export default function Dashboard() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-4">
               <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                Kalori Takip Dashboard
+                CalMCP Dashboard
               </h1>
             </div>
             <div className="flex items-center space-x-4">

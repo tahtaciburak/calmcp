@@ -51,33 +51,6 @@ I recommend adding grilled chicken (25g), Greek yogurt (15g), and almonds (6g)
 to reach your goal while staying within your calorie budget."
 ```
 
----
-
-## 🛠 **Tech Stack**
-
-<div align="center">
-
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
-</div>
-
-### 🏗 **Architecture**
-```
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   Next.js Web   │    │   MCP Server     │    │   Claude AI     │
-│   Application   │◄──►│   (Python)       │◄──►│   Integration   │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
-         │                        │                        │
-         ▼                        ▼                        ▼
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   MongoDB       │    │   RESTful API    │    │   Real-time     │
-│   Database      │    │   Endpoints      │    │   Insights      │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
-```
 
 ---
 
@@ -127,10 +100,13 @@ uv run main.py
 <div align="center">
 
 ### 🏠 Landing Page
-![Landing](https://via.placeholder.com/600x300/4F46E5/white?text=Beautiful+Landing+Page)
+![Landing](doc/landing.png)
 
 ### 📊 Dashboard
-![Dashboard](https://via.placeholder.com/600x300/10B981/white?text=Comprehensive+Dashboard)
+![Dashboard](doc/dashboard.png)
+
+### 🔒 Google Login
+![Dashboard](doc/google_login.png)
 
 ### 🤖 Claude Integration
 ![Claude](https://via.placeholder.com/600x300/8B5CF6/white?text=AI+Powered+Insights)
