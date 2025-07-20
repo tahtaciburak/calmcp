@@ -139,7 +139,7 @@ const MacroProgressBar = ({ label, current, goal, unit, color }: {
   unit: string;
   color: string;
 }) => {
-  const percentage = Math.min((current / goal) * 100, 100)
+  const percentage = Math.min((current / (goal || 1)) * 100, 100)
 
   // Predefined color classes to ensure Tailwind CSS properly includes them
   const colorClasses = {
@@ -155,7 +155,7 @@ const MacroProgressBar = ({ label, current, goal, unit, color }: {
     <div className="mb-4">
       <div className="flex justify-between text-sm mb-1">
         <span className="text-gray-600 dark:text-gray-400">{label}</span>
-        <span className="font-medium">{current.toFixed(1)}/{goal.toFixed(1)} {unit}</span>
+        <span className="font-medium">{current.toFixed(1)}/{goal?.toFixed(1) || 0} {unit}</span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2">
         <div
@@ -625,7 +625,7 @@ export default function Dashboard() {
                   <div className="mt-6">
                     <div className="flex justify-between text-sm mb-2">
                       <span>Günlük Kalori Hedefi</span>
-                      <span>{dailyBalance.calories_consumed}/{userProfile.daily_calorie_goal.toFixed(0)} kcal</span>
+                      <span>{dailyBalance.calories_consumed}/{userProfile.daily_calorie_goal?.toFixed(0) || 0} kcal</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-3">
                       <div
