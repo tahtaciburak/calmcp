@@ -344,7 +344,7 @@ export default function Dashboard() {
                 Kalori Takibi
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Günlük kalori alımı ve yakımınızı detaylı şekilde takip edin.
+                Günlük kalori alımı ve yakımınızı detaylı şekilde takip edin. <code>get_calorie_deficit_surplus</code>
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
@@ -353,7 +353,7 @@ export default function Dashboard() {
                 Beslenme Analizi
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Protein, karbonhidrat ve yağ alımınızı analiz edin.
+                Protein, karbonhidrat ve yağ alımınızı analiz edin. <code>add_food_entry</code> <code>get_calorie_deficit_surplus</code>
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
@@ -362,16 +362,16 @@ export default function Dashboard() {
                 Egzersiz Kayıtları
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Spor aktivitelerinizi ve kalori yakımınızı kaydedin.
+                Spor aktivitelerinizi ve kalori yakımınızı kaydedin. <code>add_exercise_entry</code>
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                Claude AI Entegrasyonu
+                Beslenme Danışmanı
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                MCP protokolü ile Claude'a bağlanarak AI destekli rehberlik alın.
+                MCP protokolü ile Claude'a bağlanarak AI destekli rehberlik alın. <code>get_nutrition_suggestions</code>
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
@@ -380,7 +380,7 @@ export default function Dashboard() {
                 İlerleme Analizi
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Haftalık trendlerinizi ve gelişiminizi görselleştirin.
+                Haftalık trendlerinizi ve gelişiminizi görselleştirin. <code>get_weekly_trends</code>
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
@@ -389,7 +389,7 @@ export default function Dashboard() {
                 Kişiselleştirilmiş Hedefler
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Yaşınıza, kilonuza ve hedeflerinize özel öneriler.
+                Yaşınıza, kilonuza ve hedeflerinize özel öneriler. <code>set_user_profile</code>
               </p>
             </div>
           </div>
