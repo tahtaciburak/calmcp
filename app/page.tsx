@@ -246,11 +246,69 @@ export default function Dashboard() {
   if (!session) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        {/* Navigation Bar */}
+        <nav className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              {/* Logo */}
+              <div className="flex items-center">
+                <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                  🍎 <span className="text-white-500">CalMCP</span>
+                </span>
+              </div>
+
+              {/* Navigation Links */}
+              <div className="hidden md:block">
+                <div className="ml-10 flex items-baseline space-x-8">
+                  <a
+                    href="#features"
+                    className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-md font-medium transition-colors"
+                  >
+                    Özellikler
+                  </a>
+                  <a
+                    href="#mcp-setup"
+                    className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-md font-medium transition-colors"
+                  >
+                    Kurulum
+                  </a>
+                  <a
+                    href="#about"
+                    className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-md font-medium transition-colors"
+                  >
+                    Hakkında
+                  </a>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="flex items-center space-x-4">
+                <a
+                  href="https://github.com/tahtaciburak/calmcp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clipRule="evenodd" />
+                  </svg>
+                </a>
+                <button
+                  onClick={() => signIn('google')}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                >
+                  Giriş Yap
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+
         {/* Hero Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              🍎 <span className="text-blue-600">CalMCP</span>
+              🍎 <span className="text-white-500">CalMCP</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
               AI destekli kalori takibi ve beslenme koçu.
@@ -275,7 +333,7 @@ export default function Dashboard() {
         </div>
 
         {/* Features Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div id="features" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
             ✨ Özellikler
           </h2>
@@ -387,7 +445,7 @@ export default function Dashboard() {
                     </p>
                     <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 code-scroll overflow-x-auto">
                       <code className="text-sm text-gray-800 dark:text-gray-200">
-                        git clone https://github.com/username/calmcp.git<br />
+                        git clone <a href="https://github.com/tahtaciburak/calmcp.git" target="_blank" rel="noopener noreferrer">https://github.com/tahtaciburak/calmcp.git</a><br />
                         cd calmcp<br />
                         pip install -r requirements.txt
                       </code>
@@ -412,16 +470,23 @@ export default function Dashboard() {
                     <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 code-scroll overflow-x-auto">
                       <code className="text-sm text-gray-800 dark:text-gray-200 whitespace-pre">
                         {`{
-  "mcpServers": {
-    "calmcp": {
-      "command": "python",
-      "args": ["/path/to/calmcp/main.py"],
-      "env": {
-        "API_BASE_URL": "https://your-app-domain.com/api"
-      }
-    }
-  }
-}`}
+{
+	"mcpServers": {
+		"calmcp": {
+			"command": "uv",
+			"args": [
+				"--directory",
+				"/Users/<YOUR_USERNAME_HERE>/Desktop/komunite/calmcp",
+				"run",
+				"main.py"
+			],
+			"env": {
+				"AUTH_TOKEN":"<YOUR_MCP_KEY_HERE>"
+			}
+		}
+	}
+}
+`}
                       </code>
                     </div>
                   </div>
@@ -474,6 +539,43 @@ export default function Dashboard() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* About Section */}
+        <div id="about" className="bg-white dark:bg-gray-800 py-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+              🤖 Model Context Protocol ile Güçlendirildi
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+              CalMCP, Claude AI ile doğrudan entegrasyon sağlayan Model Context Protocol (MCP) teknolojisini kullanır.
+              Bu sayede verileriniz güvenli bir şekilde AI asistanınızla paylaşılır ve kişiselleştirilmiş beslenme
+              tavsiyeleri alabilirsiniz.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="text-center">
+                <div className="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🔒</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Güvenli</h3>
+                <p className="text-gray-600 dark:text-gray-300">Verileriniz şifrelenir ve güvenli bir şekilde saklanır</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-green-100 dark:bg-green-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Hızlı</h3>
+                <p className="text-gray-600 dark:text-gray-300">Gerçek zamanlı veri senkronizasyonu</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-purple-100 dark:bg-purple-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🎯</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Kişisel</h3>
+                <p className="text-gray-600 dark:text-gray-300">Size özel AI destekli öneriler</p>
               </div>
             </div>
           </div>
