@@ -11,15 +11,14 @@
 
 ## 🎯 **What is CalMCP?**
 
-CalMCP is a revolutionary nutrition tracking platform that bridges the gap between traditional calorie counting and AI-powered health coaching. By leveraging Anthropic's **Model Context Protocol (MCP)**, CalMCP seamlessly integrates with Claude AI to provide personalized, intelligent nutrition guidance.
+CalMCP is a revolutionary nutrition tracking platform that bridges the gap between traditional calorie counting and AI-powered health coaching. By leveraging Anthropic's **Model Context Protocol (MCP)**, CalMCP seamlessly integrates with **Claude AI** to provide personalized, intelligent nutrition guidance.
 
 ### 🌟 **Why CalMCP?**
 
-- 🤖 **First-ever MCP integration** for nutrition tracking
 - 🔗 **Direct Claude AI connection** for personalized advice
 - 📊 **Real-time macro tracking** with intelligent insights
+- 🤖 **First-ever MCP integration** for nutrition tracking
 - 🎯 **Goal-oriented approach** tailored to your lifestyle
-- 🔒 **Privacy-first design** with secure data handling
 
 ---
 
@@ -84,7 +83,7 @@ to reach your goal while staying within your calorie budget."
 
 ## 🎮 **Quick Start**
 
-### 2. **Clone & Install**
+### 1. **Clone & Install**
 ```bash
 git clone https://github.com/tahtaciburak/calmcp.git
 cd calmcp
@@ -98,15 +97,20 @@ uv run main.py
 ### 2. **Configure Claude Desktop**
 ```json
 {
-  "mcpServers": {
-    "calmcp": {
-      "command": "python",
-      "args": ["/path/to/calmcp/main.py"],
-      "env": {
-        "AUTH_TOKEN": "https://"
-      }
-    }
-  }
+	"mcpServers": {
+		"calmcp": {
+			"command": "uv",
+			"args": [
+				"--directory",
+				"/Users/<YOUR_USERNAME_HERE>/Desktop/calmcp/mcp",
+				"run",
+				"main.py"
+			],
+			"env": {
+				"AUTH_TOKEN":"<YOUR_MCP_KEY_HERE>"
+			}
+		}
+	}
 }
 ```
 

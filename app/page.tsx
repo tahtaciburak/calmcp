@@ -476,7 +476,7 @@ export default function Dashboard() {
 			"command": "uv",
 			"args": [
 				"--directory",
-				"/Users/<YOUR_USERNAME_HERE>/Desktop/komunite/calmcp",
+				"/Users/<YOUR_USERNAME_HERE>/Desktop/calmcp/mcp",
 				"run",
 				"main.py"
 			],
