@@ -38,7 +38,7 @@ CalMCP is a revolutionary nutrition tracking platform that bridges the gap betwe
 ## 🚀 **Live Demo**
 
 ### Try CalMCP Now!
-1. **Visit**: [your-demo-url.com](https://your-demo-url.com)
+1. **Visit**: [calmcp.vercel.app](https://calmcp.vercel.app)
 2. **Sign in** with Google
 3. **Set up** your profile
 4. **Start tracking** your nutrition
@@ -84,20 +84,15 @@ to reach your goal while staying within your calorie budget."
 
 ## 🎮 **Quick Start**
 
-### 1. **Clone & Install**
+### 2. **Clone & Install**
 ```bash
 git clone https://github.com/tahtaciburak/calmcp.git
 cd calmcp
 
-# Web Application
-cd web
-npm install
-npm run dev
-
 # MCP Server
-cd ../calmcp
-pip install -r requirements.txt
-python main.py
+cd mcp
+uv sync
+uv run main.py
 ```
 
 ### 2. **Configure Claude Desktop**
@@ -108,7 +103,7 @@ python main.py
       "command": "python",
       "args": ["/path/to/calmcp/main.py"],
       "env": {
-        "API_BASE_URL": "https://your-domain.com/api"
+        "AUTH_TOKEN": "https://"
       }
     }
   }
@@ -120,26 +115,6 @@ python main.py
 - 🎯 Set personalized goals
 - 🤖 Chat with Claude for nutrition advice
 - 📊 Monitor your progress
-
----
-
-## 🏆 **Hackathon Highlights**
-
-### 🎯 **Innovation Score: 10/10**
-- **First MCP nutrition tracker** in the ecosystem
-- **Seamless AI integration** with real user data
-- **Privacy-focused** architecture
-
-### 🛠 **Technical Excellence: 10/10**
-- **Full-stack implementation** in 48 hours
-- **Responsive design** with dark mode
-- **Real-time data synchronization**
-- **Scalable architecture**
-
-### 💡 **Market Impact: 10/10**
-- **$78B nutrition market** opportunity
-- **Growing AI health** trend
-- **MCP protocol adoption** early mover advantage
 
 ---
 
@@ -160,24 +135,14 @@ python main.py
 
 ---
 
-## 🎯 **Future Roadmap**
-
-- [ ] 📱 **Mobile App** (React Native)
-- [ ] 🍽️ **Food Image Recognition** (AI-powered)
-- [ ] 👥 **Social Features** (Community challenges)
-- [ ] 🏥 **Healthcare Integration** (Doctor dashboard)
-- [ ] 🌍 **Multi-language Support**
-- [ ] 🔔 **Smart Notifications** (ML-based reminders)
-
----
-
 ## 👥 **Team**
 
-**Built with ❤️ by passionate developers during the hackathon**
+**Built with ❤️ by passionate developers during the Komunite MCP Hackathon**
 
-- **Lead Developer**: [Your Name](https://github.com/tahtaciburak)
+- **Developer**: [Burak Tahtacı](https://github.com/tahtaciburak)
+- **Developer**: [Polat Tahtacı](https://github.com/tahtacipolat)
 - **Tech Stack**: Next.js, Python, MongoDB, MCP
-- **Timeline**: 48 hours of intense coding
+- **Timeline**: 12 hours of intense coding
 
 ---
 
@@ -185,7 +150,7 @@ python main.py
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/🚀-Try%20CalMCP%20Now-blue?style=for-the-badge&logoColor=white)](https://your-demo-url.com)
+[![Live Demo](https://img.shields.io/badge/🚀-Try%20CalMCP%20Now-blue?style=for-the-badge&logoColor=white)](https://calmcp.vercel.app)
 
 **Experience the future of AI-powered nutrition tracking!**
 
