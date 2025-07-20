@@ -108,8 +108,8 @@ uv run main.py
 ### 🔒 Google Login
 ![Dashboard](doc/google_login.png)
 
-### 🤖 Claude Integration
-![Claude](https://via.placeholder.com/600x300/8B5CF6/white?text=AI+Powered+Insights)
+### 🤖 Claude Integration with Key
+![Claude](doc/authkey.png)
 
 </div>
 
