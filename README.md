@@ -70,20 +70,20 @@ uv run main.py
 ### 2. **Configure Claude Desktop**
 ```json
 {
-	"mcpServers": {
-		"calmcp": {
-			"command": "uv",
-			"args": [
-				"--directory",
-				"/Users/<YOUR_USERNAME_HERE>/Desktop/calmcp/mcp",
-				"run",
-				"main.py"
-			],
-			"env": {
-				"AUTH_TOKEN":"<YOUR_MCP_KEY_HERE>"
-			}
-		}
+  "mcpServers": {
+    "calmcp": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/Users/<YOUR_USERNAME_HERE>/Desktop/calmcp/mcp",
+        "run",
+        "main.py"
+      ],
+      "env": {
+        "AUTH_TOKEN":"<YOUR_MCP_KEY_HERE>"
+      }
 	}
+  }
 }
 ```
 
